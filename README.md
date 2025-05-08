@@ -27,7 +27,7 @@ Open Trivia Database API
 Installation and Setup
 
 Clone the repository:
-bashgit clone https://github.com/yourusername/trivia-quest.git
+bashgit clone [https://github.com/yourusername/trivia-quest.git](https://github.com/Nitishparamanik/Interactive-Trivia-Quiz-with-API-Integration-task3-)
 cd trivia-quest
 
 Open the project:
