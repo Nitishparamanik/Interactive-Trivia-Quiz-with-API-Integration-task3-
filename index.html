@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trivia Quest</h1>
+            <p class="tagline">Test your knowledge with random trivia questions</p>
+        </header>
+
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h2>Welcome to Trivia Quest!</h2>
+                <p>Challenge yourself with questions from various categories.</p>
+                <div class="category-selection">
+                    <h3>Select Category:</h3>
+                    <div class="categories">
+                        <button class="category-btn" data-id="9">General Knowledge</button>
+                        <button class="category-btn" data-id="17">Science & Nature</button>
+                        <button class="category-btn" data-id="21">Sports</button>
+                        <button class="category-btn" data-id="23">History</button>
+                        <button class="category-btn" data-id="11">Movies</button>
+                        <button class="category-btn" data-id="12">Music</button>
+                    </div>
+                </div>
+                <div class="difficulty-selection">
+                    <h3>Select Difficulty:</h3>
+                    <div class="difficulties">
+                        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+                    </div>
+                </div>
+                <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="screen">
+            <div class="loader"></div>
+            <p>Loading questions...</p>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <div class="quiz-progress">
+                        <div class="progress-text">Question <span id="current-question">1</span> of <span id="total-questions">10</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="quiz-score">
+                        Score: <span id="score">0</span>
+                    </div>
+                </div>
+                <div class="quiz-meta">
+                    <div class="quiz-category" id="question-category">Category: General Knowledge</div>
+                    <div class="quiz-difficulty" id="question-difficulty">Difficulty: Medium</div>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question-text">Question text will appear here</h2>
+                <div class="options-container" id="options-container">
+                    <!-- Options will be inserted here by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="next-btn" class="btn primary-btn" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <h2>Quiz Completed!</h2>
+                <div class="results-score">
+                    <div class="score-circle">
+                        <span id="final-score">0</span>/<span id="final-total">10</span>
+                    </div>
+                    <p id="score-message">Great job!</p>
+                </div>
+                <div class="score-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Correct Answers:</span>
+                        <span id="correct-answers" class="detail-value">0</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Incorrect Answers:</span>
+                        <span id="incorrect-answers" class="detail-value">0</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Time Taken:</span>
+                        <span id="time-taken" class="detail-value">0:00</span>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="play-again-btn" class="btn secondary-btn">Play Again</button>
+                    <button id="home-btn" class="btn primary-btn">Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Trivia Quest | Powered by Open Trivia DB</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
